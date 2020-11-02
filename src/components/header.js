@@ -1,13 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
+import "./header.css"
 
-function Header(props) {
+function Header({headerText}) {
 
   return (
     <>
-        <h1>{props.headerText}</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about/">About</Link>
+        <h1>{headerText}</h1>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about/">About</Link></li>
+          <li><Link to="/product/">Product</Link></li>
+        </ul>
     </>
   )
 }
